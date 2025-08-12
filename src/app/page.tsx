@@ -1,102 +1,224 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Github } from "lucide-react"
+
+const technologies = {
+  "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript"],
+  "Frameworks & Libraries": ["NextJS", "ReactJS", "ExpressJS"],
+  "Databases & ORMs": ["Drizzle ORM", "Cloud Firestore", "MongoDB", "Neon (PostgreSQL hosting)"],
+  "UI & Styling Tools": ["Shadcn UI", "Tailwind CSS"],
+  "Hosting & Deployment": ["Firebase Hosting", "Vercel"],
+  "Backend-as-a-Service (BaaS)": ["Firebase", "Supabase"],
+  "Artificial Intelligence": ["ChatGPT", "Cursor AI", "V0"],
+  "Authentication & User Management": ["Clerk", "Firebase Authentication"],
+  "UI/UX Design": ["Figma"],
+  "API": ["OpenAI API"],
+  "Other Programming Languages": ["C++", "Java", "Python"],
+  "Other Services": ["Algolia"],
+}
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen w-full bg-background text-foreground">
+      {/* Hero */}
+      <section className="relative overflow-hidden cyan-gradient">
+        <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(60%_60%_at_50%_20%,#000_40%,transparent)]" />
+        <div className="container mx-auto px-6 py-20 min-h-[100vh] md:py-28 grid md:grid-cols-2 gap-10 items-center">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <Badge className="bg-cyan-500 text-black hover:bg-cyan-400">Welcome</Badge>
+            </div>
+            <h1 className="text-4xl/tight md:text-6xl/tight font-semibold">
+              Hi, I’m <span className="text-cyan-400">Francis</span> —
+              <br />ready to plan, design, and build websites.
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground max-w-prose">
+              I'm a web developer and I've been crafting random web development projects for a few years now.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/works"><Button className="bg-cyan-500 text-black hover:bg-cyan-400">View Works</Button></Link>
+              <Link href="/resume"><Button variant="outline" className="border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10">View Resume</Button></Link>
+            </div>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <div className="relative">
+              <Avatar className="h-40 w-40 md:h-56 md:w-56 ring-2 ring-cyan-500/60 cyan-glow">
+                <AvatarImage src="/profile.jpg" alt="Profile" />
+                <AvatarFallback>YN</AvatarFallback>
+              </Avatar>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
+                <Badge variant="outline" className="border-cyan-500/50 text-cyan-300 bg-black/40 backdrop-blur">
+                  Available for work
+                </Badge>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* About */}
+      <section className="container mx-auto px-6 pb-16 md:py-24">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
+          <Card className="bg-secondary/40 border-cyan-500/20">
+            <CardContent className="p-6 md:p-8 flex justify-center">
+              <Image
+                src="/about.png"
+                alt="About portrait"
+                width={520}
+                height={520}
+                className="rounded-xl object-cover cyan-glow"
+              />
+            </CardContent>
+          </Card>
+          <div className="space-y-5">
+            <h2 className="text-3xl md:text-4xl font-semibold">About Me</h2>
+            <p className="text-muted-foreground max-w-prose">
+              I am a web development enthusiast. I love turning ideas into reality through web development.
+            </p>
+            <Separator className="bg-cyan-500/30" />
+            <div className="flex flex-wrap gap-3">
+              <Badge className="bg-cyan-500 text-black">Frontend</Badge>
+              <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">Backend</Badge>
+              <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">UI/UX</Badge>
+              <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">Performance</Badge>
+            </div>
+            <Link href="/resume"><Button className="bg-cyan-500 text-black hover:bg-cyan-400">Go to Resume</Button></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Works - Image Marquee */}
+      <section className="relative overflow-hidden py-16 md:py-24 bg-black/60">
+        <div className="container mx-auto px-6 flex items-center justify-between mb-8">
+          <h2 className="text-3xl md:text-4xl font-semibold">My Works</h2>
+          <Link href="/works"><Button variant="outline" className="border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10">See All</Button></Link>
+        </div>
+        <div className="relative">
+          <div className="marquee-track marquee-animate will-change-transform">
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <Image
+                key={`work-${n}`}
+                src={`/works/work-${n}.svg`}
+                alt={`Work ${n}`}
+                width={500}
+                height={300}
+                className="h-44 w-auto rounded-xl object-cover border border-cyan-500/20"
+              />
+            ))}
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <Image
+                key={`work-dup-${n}`}
+                src={`/works/work-${n}.svg`}
+                alt={`Work ${n}`}
+                width={500}
+                height={300}
+                className="h-44 w-auto rounded-xl object-cover border border-cyan-500/20"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies */}
+      <section className="container mx-auto px-6 py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-8">Technologies and Tools</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Object.entries(technologies).map(([category, techs]) => (
+            <Card
+              key={category}
+              className="bg-secondary/40 border-cyan-500/20 hover:border-cyan-400 transition-colors duration-300"
+            >
+              <CardHeader>
+                <CardTitle className="text-cyan-400 text-lg font-semibold">{category}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {techs.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-cyan-400/10 text-cyan-300 border-cyan-400/20 hover:bg-cyan-400/20 transition-colors duration-200"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <footer className="bg-background border-t">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 just md:grid-cols-3 gap-8">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <Link href="/" className="flex items-center">
+                <Image src="/logo.png" alt="logo" width={50} height={50} priority />
+                <h2 className="text-white font-light uppercase tracking-wide">Francis</h2>
+              </Link>
+              <p className="text-sm text-muted-foreground">
+                Ready to plan, design, and build websites for your needs.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Contacts</h3>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Mail className="h-4 w-4" />
+                  <span>francisabainza714@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Phone className="h-4 w-4" />
+                  <span>(+63)985 122 0427</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>San Pedro, Laguna, Philippines 4023</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Get In Touch</h3>
+              <div className="flex gap-2">
+                <Button variant="outline" size="icon" asChild>
+                  <a href="https://facebook.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4" />
+                    <span className="sr-only">Facebook</span>
+                  </a>
+                </Button>
+                <Button variant="outline" size="icon" asChild>
+                  <a href="https://facebook.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                    <Facebook className="h-4 w-4" />
+                    <span className="sr-only">Facebook</span>
+                  </a>
+                </Button>
+                <Button variant="outline" size="icon" asChild>
+                  <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-4 w-4" />
+                    <span className="sr-only">LinkedIn</span>
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <Separator className="my-6" />
+
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Francis Abainza. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
