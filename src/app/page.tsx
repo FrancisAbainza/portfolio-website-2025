@@ -192,19 +192,19 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Get In Touch</h3>
               <div className="flex gap-2">
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://facebook.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/FrancisAbainza" target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4" />
                     <span className="sr-only">Facebook</span>
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://facebook.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/francisrafael.abainza/" target="_blank" rel="noopener noreferrer">
                     <Facebook className="h-4 w-4" />
                     <span className="sr-only">Facebook</span>
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/francis-abainza-8813a0282/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-4 w-4" />
                     <span className="sr-only">LinkedIn</span>
                   </a>
