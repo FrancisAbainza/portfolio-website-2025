@@ -38,7 +38,7 @@ export default function Home() {
               <br />ready to plan, design, and build websites.
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-prose">
-              I'm a web developer and I've been crafting random web development projects for a few years now.
+              I&apos;m a web developer and I&apos;ve been crafting random web development projects for a few years now.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/works"><Button className="bg-cyan-500 text-black hover:bg-cyan-400">View Works</Button></Link>

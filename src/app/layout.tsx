@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Francis Abainza",
+  title: "Francis Abainza's Portfolio",
   description: "Francis Abainza's personal portfolio website",
 };
 
