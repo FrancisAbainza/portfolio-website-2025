@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Github } from "lucide-react"
+import { Facebook, Linkedin, Mail, Phone, MapPin, Github } from "lucide-react"
 
 const technologies = {
   "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript"],
@@ -49,7 +49,7 @@ export default function Home() {
             <div className="relative">
               <Avatar className="h-40 w-40 md:h-56 md:w-56 ring-2 ring-cyan-500/60 cyan-glow">
                 <AvatarImage src="/profile.jpg" alt="Profile" />
-                <AvatarFallback>YN</AvatarFallback>
+                <AvatarFallback>FA</AvatarFallback>
               </Avatar>
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
                 <Badge variant="outline" className="border-cyan-500/50 text-cyan-300 bg-black/40 backdrop-blur">

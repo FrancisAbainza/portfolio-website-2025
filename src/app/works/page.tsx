@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { works } from "@/data/works";
 import { WorkCard } from "@/components/work-card";
 
