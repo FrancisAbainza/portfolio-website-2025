@@ -1,6 +1,31 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* custom animations */
+@keyframes animateImgLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes animateImgRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* utility classes */
+.animate-left {
+  animation: animateImgLeft 30s linear infinite;
+}
+.animate-right {
+  animation: animateImgRight 30s linear infinite;
+}
+.animate-scale-reveal {
+  animation: scaleReveal 1s ease-in-out forwards;
+}
+.animate-reveal {
+  animation: reveal 1s ease-in-out forwards;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

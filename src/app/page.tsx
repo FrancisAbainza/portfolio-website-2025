@@ -6,6 +6,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Facebook, Linkedin, Mail, Phone, MapPin, Github } from "lucide-react"
+import { works } from "@/data/works";
+import Slideshow from "@/components/slideshow";
 
 const technologies = {
   "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript"],
@@ -17,7 +19,7 @@ const technologies = {
   "Artificial Intelligence": ["ChatGPT", "Cursor AI", "V0"],
   "Authentication & User Management": ["Clerk", "Firebase Authentication"],
   "UI/UX Design": ["Figma"],
-  "API": ["OpenAI API"],
+  "API": ["OpenAI"],
   "Other Programming Languages": ["C++", "Java", "Python"],
   "Other Services": ["Algolia"],
 }
@@ -48,7 +50,7 @@ export default function Home() {
           <div className="flex justify-center md:justify-end">
             <div className="relative">
               <Avatar className="h-40 w-40 md:h-56 md:w-56 ring-2 ring-cyan-500/60 cyan-glow">
-                <AvatarImage src="/profile.jpg" alt="Profile" />
+                <AvatarImage src="/profile.jpg" alt="Profile" fetchPriority="high" />
                 <AvatarFallback>FA</AvatarFallback>
               </Avatar>
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
@@ -98,30 +100,12 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-semibold">My Works</h2>
           <Link href="/works"><Button variant="outline" className="border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10">See All</Button></Link>
         </div>
-        <div className="relative">
-          <div className="marquee-track marquee-animate will-change-transform">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <Image
-                key={`work-${n}`}
-                src={`/works/work-${n}.svg`}
-                alt={`Work ${n}`}
-                width={500}
-                height={300}
-                className="h-44 w-auto rounded-xl object-cover border border-cyan-500/20"
-              />
-            ))}
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <Image
-                key={`work-dup-${n}`}
-                src={`/works/work-${n}.svg`}
-                alt={`Work ${n}`}
-                width={500}
-                height={300}
-                className="h-44 w-auto rounded-xl object-cover border border-cyan-500/20"
-              />
-            ))}
-          </div>
-        </div>
+        <Slideshow worksImages={works.map(work => (
+          {
+            src: work.src,
+            alt: work.alt,
+          }
+        ))} />
       </section>
 
       {/* Technologies */}

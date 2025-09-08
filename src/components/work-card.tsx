@@ -6,9 +6,10 @@ import { Badge } from "./ui/badge"
 type Work = {
   title: string
   description: string
-  image: string
+  src: string
   stack: string[]
   url: string
+  alt: string
 }
 
 type WorkCardProps = {
@@ -24,17 +25,17 @@ export function WorkCard({ work }: WorkCardProps) {
       className="block group" // Added group class for hover effects
     >
       <Card
-        className="bg-secondary/40 border-cyan-500/20 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:border-cyan-500/40 cursor-pointer" // Added hover animations and cursor pointer
+        className="bg-secondary/40 border-cyan-500/20 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg group-hover:border-cyan-500/40 cursor-pointer h-full p-0" // Added hover animations and cursor pointer
       >
         <CardContent className="p-0">
           <div className="relative overflow-hidden rounded-t-lg">
             {/* Added relative positioning and overflow hidden for image hover effect */}
             <Image
-              src={work.image || "/placeholder.svg"}
+              src={work.src || "/placeholder.svg"}
               alt={work.description}
               width={1200}
               height={800}
-              className="h-56 w-full object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105" // Added image scale hover effect
+              className="h-60 w-full object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105" // Added image scale hover effect
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
             {/* Added overlay for hover effect */}
