@@ -4,7 +4,7 @@ export const works = [
     description: "A website where users can post their works, skills, and talents. The idea is that instead of users creating their own portfolio, page, or website to showcase their works to clients/employers, users can use this website instead.",
     stack: ["NextJS", "Firebase", "Shadcn UI", "Tailwind CSS", "Vercel", "Algolia"],
     url: "https://exora.vercel.app/",
-    src: "/works/exora.jpg",
+    src: "/works/exora.png",
     alt: "image of exora website",
   },
   {
@@ -12,7 +12,7 @@ export const works = [
     description: "The goal of the game is to provide unique answers to prompts without repeating what computer have said.",
     stack: ["NextJS", "OpenAI", "Drizzle ORM", "Neon", "Shadcn UI", "Tailwind CSS", "Vercel"],
     url: "https://dont-say-the-same-thing-as-me.vercel.app/",
-    src: "/works/dontsaythesamethingasme.jpg",
+    src: "/works/dontsaythesamethingasme.png",
     alt: "image of dont say the same thing as me website",
   },
   {
@@ -20,7 +20,7 @@ export const works = [
     description: "A non-preemptive cpu scheduling algorithm calculator.",
     stack: ["ReactJS", "Firebase Hosting"],
     url: "https://cpu-scheduling-calculator.web.app/",
-    src: "/works/cpuschedulingcalculator.jpg",
+    src: "/works/cpuschedulingcalculator.png",
     alt: "image of cpu scheduling calculator website",
   },
   {
@@ -28,15 +28,15 @@ export const works = [
     description: "Portfolio website I made in 2024. You may check this if you want to see my works in other fields of interest.",
     stack: ["ReactJS", "Firebase Hosting"],
     url: "https://francis-abainza-portfolio.web.app/",
-    src: "/works/portfoliowebsite2024.jpg",
+    src: "/works/portfoliowebsite2024.png",
     alt: "image of my portfolio website in 2024",
   },
   {
     title: "Memory Game",
-    description: "The goal is to memorize the pattern the computer have shown. The longer the game goes, the harder the pattern gets.",
+    description: "The goal is to memorize the computer-generated pattern. The longer the game goes, the harder the pattern gets.",
     stack: ["HTML", "CSS", "JavaScript (JS)"],
     url: "https://francisabainza.github.io/memory-game/",
-    src: "/works/memorygame.jpg",
+    src: "/works/memorygame.png",
     alt: "image of memory game website",
   },
   {
@@ -44,7 +44,7 @@ export const works = [
     description: "You know what this is.",
     stack: ["HTML", "CSS", "JavaScript (JS)"],
     url: "https://francisabainza.github.io/rock-paper-scissors/",
-    src: "/works/rockpaperscissors.jpg",
+    src: "/works/rockpaperscissors.png",
     alt: "image of rock paper scissors website",
   },
 ]
