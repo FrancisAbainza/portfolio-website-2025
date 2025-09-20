@@ -12,14 +12,14 @@ import Slideshow from "@/components/slideshow";
 const technologies = {
   "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript"],
   "Frameworks & Libraries": ["NextJS", "ReactJS", "ExpressJS"],
-  "Databases & ORMs": ["Drizzle ORM", "Cloud Firestore", "MongoDB", "Neon (PostgreSQL hosting)"],
+  "Databases & ORMs": ["Drizzle ORM", "Cloud Firestore", "MongoDB", "Neon"],
   "UI & Styling Tools": ["Shadcn UI", "Tailwind CSS"],
-  "Hosting & Deployment": ["Firebase Hosting", "Vercel"],
+  "Hosting & Deployment": ["Firebase Hosting", "Vercel", "Render"],
   "Backend-as-a-Service (BaaS)": ["Firebase", "Supabase"],
   "Artificial Intelligence": ["ChatGPT", "Cursor AI", "V0"],
   "Authentication & User Management": ["Clerk", "Firebase Authentication"],
   "UI/UX Design": ["Figma"],
-  "API": ["OpenAI"],
+  "API": ["OpenAI Platform"],
   "Other Programming Languages": ["C++", "Java", "Python"],
   "Other Services": ["Algolia"],
 }

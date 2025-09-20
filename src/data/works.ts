@@ -1,5 +1,13 @@
 export const works = [
   {
+    title: "Last Minute Learner",
+    description: "A website where users can generate a reviewer from either prompt or PDF.",
+    stack: ["NextJS", "ExpressJS", "Drizzle ORM", "Neon", "Clerk", "OpenAI Platform", "Shadcn UI", "Tailwind CSS", "Vercel", "Render"],
+    url: "https://last-minute-learner.vercel.app/",
+    src: "/works/lastminutelearner.png",
+    alt: "image of last minute learner website",
+  },
+  {
     title: "Exora",
     description: "A website where users can post their works, skills, and talents. The idea is that instead of users creating their own portfolio, page, or website to showcase their works to clients/employers, users can use this website instead.",
     stack: ["NextJS", "Firebase", "Shadcn UI", "Tailwind CSS", "Vercel", "Algolia"],
