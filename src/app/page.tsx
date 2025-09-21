@@ -10,7 +10,7 @@ import { works } from "@/data/works";
 import Slideshow from "@/components/slideshow";
 
 const technologies = {
-  "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript"],
+  "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript", "EJS"],
   "Frameworks & Libraries": ["NextJS", "ReactJS", "ExpressJS"],
   "Databases & ORMs": ["Drizzle ORM", "Cloud Firestore", "MongoDB", "Neon"],
   "UI & Styling Tools": ["Shadcn UI", "Tailwind CSS"],
@@ -19,7 +19,7 @@ const technologies = {
   "Artificial Intelligence": ["ChatGPT", "Cursor AI", "V0"],
   "Authentication & User Management": ["Clerk", "Firebase Authentication"],
   "UI/UX Design": ["Figma"],
-  "API": ["OpenAI Platform"],
+  "API": ["OpenAI Platform", "Cleanuri API"],
   "Other Programming Languages": ["C++", "Java", "Python"],
   "Other Services": ["Algolia"],
 }
@@ -140,7 +140,7 @@ export default function Home() {
 
       <footer className="bg-background border-t">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 just md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
               <Link href="/" className="flex items-center">
@@ -199,9 +199,7 @@ export default function Home() {
 
           <Separator className="my-6" />
 
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Francis Abainza. All rights reserved.</p>
-          </div>
+          <p className="text-sm text-center text-muted-foreground">© {new Date().getFullYear()} Francis Abainza. All rights reserved.</p>
         </div>
       </footer>
     </div>

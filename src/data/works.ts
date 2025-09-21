@@ -18,7 +18,7 @@ export const works = [
   {
     title: "Don't Say The Same Thing As Me",
     description: "The goal of the game is to provide unique answers to prompts without repeating what computer have said.",
-    stack: ["NextJS", "OpenAI", "Drizzle ORM", "Neon", "Shadcn UI", "Tailwind CSS", "Vercel"],
+    stack: ["NextJS", "OpenAI Platform", "Drizzle ORM", "Neon", "Shadcn UI", "Tailwind CSS", "Vercel"],
     url: "https://dont-say-the-same-thing-as-me.vercel.app/",
     src: "/works/dontsaythesamethingasme.png",
     alt: "image of dont say the same thing as me website",
@@ -38,6 +38,14 @@ export const works = [
     url: "https://francis-abainza-portfolio.web.app/",
     src: "/works/portfoliowebsite2024.png",
     alt: "image of my portfolio website in 2024",
+  },
+  {
+    title: "Shrink-URL",
+    description: "A website that shortens a URL",
+    stack: ["ExpressJS", "EJS", "Cleanuri API"],
+    url: "https://shrink-url-rmrw.onrender.com/",
+    src: "/works/shrinkurl.png",
+    alt: "image of shrink url website",
   },
   {
     title: "Memory Game",
