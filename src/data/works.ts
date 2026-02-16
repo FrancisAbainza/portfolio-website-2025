@@ -2,7 +2,7 @@ export const works = [
   {
     title: "Last Minute Learner",
     description: "A website where users can generate a reviewer from either prompt or PDF.",
-    stack: ["NextJS", "ExpressJS", "Drizzle ORM", "Neon", "Clerk", "OpenAI Platform", "Shadcn UI", "Tailwind CSS", "Vercel", "Render"],
+    stack: ["NextJS", "ExpressJS", "Drizzle ORM", "Neon", "Clerk", "AI SDK", "Shadcn UI", "Tailwind CSS", "Vercel", "Render"],
     url: "https://last-minute-learner.vercel.app/",
     src: "/works/lastminutelearner.png",
     alt: "image of last minute learner website",
@@ -18,10 +18,18 @@ export const works = [
   {
     title: "Don't Say The Same Thing As Me",
     description: "The goal of the game is to provide unique answers to prompts without repeating what computer have said.",
-    stack: ["NextJS", "OpenAI Platform", "Drizzle ORM", "Neon", "Shadcn UI", "Tailwind CSS", "Vercel"],
+    stack: ["NextJS", "AI SDK", "Drizzle ORM", "Neon", "Shadcn UI", "Tailwind CSS", "Vercel"],
     url: "https://dont-say-the-same-thing-as-me.vercel.app/",
     src: "/works/dontsaythesamethingasme.png",
     alt: "image of dont say the same thing as me website",
+  },
+  {
+    title: "AI-T Chatbot",
+    description: "An AI-powered chatbot.",
+    stack: ["NextJS", "AI SDK"],
+    url: "https://ai-t-chatbot.vercel.app/",
+    src: "/works/aitchatbot.png",
+    alt: "image of AI-T Chatbot website",
   },
   {
     title: "CPU Scheduling Calculator",

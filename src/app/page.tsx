@@ -16,12 +16,12 @@ const technologies = {
   "UI & Styling Tools": ["Shadcn UI", "Tailwind CSS"],
   "Hosting & Deployment": ["Firebase Hosting", "Vercel", "Render"],
   "Backend-as-a-Service (BaaS)": ["Firebase", "Supabase"],
-  "Artificial Intelligence": ["ChatGPT", "Cursor AI", "V0"],
+  "Artificial Intelligence": ["Cursor AI", "Github Copilot", "V0"],
   "Authentication & User Management": ["Clerk", "Firebase Authentication"],
   "UI/UX Design": ["Figma"],
-  "API": ["OpenAI Platform", "Cleanuri API"],
+  "API": ["AI SDK", "Cleanuri API", "Google Maps API",],
   "Other Programming Languages": ["C++", "Java", "Python"],
-  "Other Services": ["Algolia"],
+  "Mobile Developement": ["React Native"],
 }
 
 export default function Home() {
