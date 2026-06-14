@@ -10,18 +10,15 @@ import { works } from "@/data/works";
 import Slideshow from "@/components/slideshow";
 
 const technologies = {
-  "Frontend Languages & Technologies": ["CSS", "HTML", "JavaScript (JS)", "TypeScript", "EJS"],
-  "Frameworks & Libraries": ["NextJS", "ReactJS", "ExpressJS"],
-  "Databases & ORMs": ["Drizzle ORM", "Cloud Firestore", "MongoDB", "Neon"],
-  "UI & Styling Tools": ["Shadcn UI", "Tailwind CSS"],
-  "Hosting & Deployment": ["Firebase Hosting", "Vercel", "Render"],
-  "Backend-as-a-Service (BaaS)": ["Firebase", "Supabase"],
-  "Artificial Intelligence": ["Cursor AI", "Github Copilot", "V0"],
-  "Authentication & User Management": ["Clerk", "Firebase Authentication"],
-  "UI/UX Design": ["Figma"],
-  "API": ["AI SDK", "Cleanuri API", "Google Maps API",],
-  "Other Programming Languages": ["C++", "Java", "Python"],
-  "Mobile Developement": ["React Native"],
+  "Languages": ["JavaScript (JS)", "TypeScript", "Python", "C++", "Java", "HTML", "CSS"],
+  "Frameworks & Libraries": ["NextJS", "ReactJS", "React Native", "ExpressJS", "Flask"],
+  "Backend, Databases & Auth": [
+    "Firebase", "Supabase", "MongoDB", "Neon", "Drizzle ORM", 
+    "SQLAlchemy", "Clerk", "Firebase Authentication", "Supabase Authentication"
+  ],
+  "UI & Design": ["Tailwind CSS", "Shadcn UI", "Figma"],
+  "Cloud, Hosting & Storage": ["Vercel", "Firebase Hosting", "Render", "Cloudflare R2", "Firebase Storage"],
+  "AI Tools & APIs": ["Github Copilot", "Cursor", "V0", "AI SDK", "Google Maps API"],
 }
 
 export default function Home() {
@@ -87,7 +84,6 @@ export default function Home() {
               <Badge className="bg-cyan-500 text-black">Frontend</Badge>
               <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">Backend</Badge>
               <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">UI/UX</Badge>
-              <Badge variant="outline" className="border-cyan-500/50 text-cyan-300">Performance</Badge>
             </div>
             <Link href="/resume"><Button className="bg-cyan-500 text-black hover:bg-cyan-400">Go to Resume</Button></Link>
           </div>

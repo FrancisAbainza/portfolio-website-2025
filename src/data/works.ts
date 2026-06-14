@@ -1,20 +1,20 @@
 export const works = [
   {
     title: "Last Minute Learner",
-    description: "A website where users can generate a reviewer from either prompt or PDF.",
-    stack: ["NextJS", "ExpressJS", "Drizzle ORM", "Neon", "Clerk", "AI SDK", "Shadcn UI", "Tailwind CSS", "Vercel", "Render"],
+    description: "A website with integrated AI-assistant where users can generate a reviewer from either prompt or document.",
+    stack: ["NextJS", "Flask", "SQLAlchemy", "Neon", "Clerk", "AI SDK", "Shadcn UI", "Tailwind CSS", "Vercel", "Render"],
     url: "https://last-minute-learner.vercel.app/",
     src: "/works/lastminutelearner.png",
     alt: "image of last minute learner website",
   },
-  {
+/*   {
     title: "Exora",
     description: "A website where users can post their works, skills, and talents. The idea is that instead of users creating their own portfolio, page, or website to showcase their works to clients/employers, users can use this website instead.",
     stack: ["NextJS", "Firebase", "Shadcn UI", "Tailwind CSS", "Vercel", "Algolia"],
     url: "https://exora.vercel.app/",
     src: "/works/exora.png",
     alt: "image of exora website",
-  },
+  }, */
   {
     title: "Don't Say The Same Thing As Me",
     description: "The goal of the game is to provide unique answers to prompts without repeating what computer have said.",
@@ -70,5 +70,13 @@ export const works = [
     url: "https://francisabainza.github.io/rock-paper-scissors/",
     src: "/works/rockpaperscissors.png",
     alt: "image of rock paper scissors website",
+  },
+  {
+    title: "Portfolio Website 2023",
+    description: "My very first fully-fledged portfolio website that I made in 2023.",
+    stack: ["HTML", "CSS", "JavaScript (JS)"],
+    url: "https://francisabainza.github.io/portfolio-website-2023/",
+    src: "/works/portfoliowebsite2023.png",
+    alt: "image of my portfolio website in 2023",
   },
 ]
